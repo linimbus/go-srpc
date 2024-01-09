@@ -1,0 +1,13 @@
+language: go
+
+go:
+  - "1.x"
+  - "1.8"
+  - "1.10.x"
+  - master
+
+script:
+  - go build -v -o benchmark_client ./benchmark/client
+  - go build -v -o benchmark_server ./benchmark/server
+  - go build -v -o helloworld_client ./helloworld/client
+  - go build -v -o helloworld_server ./helloworld/server
